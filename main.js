@@ -1,29 +1,3 @@
-// function numberPressed(number){
-//   var displayedNumber = Number(document.getElementById('display').textContent);
-//
-//   if(operation == '+') {
-//     displayedNumber = displayedNumber + number;
-//   } else if(operation == '-') {
-//
-//   } else {
-//     displayedNumber = number;
-//   }
-// function numberPressed(){
-//   return 9
-//   document.getElementById("display").textContent = '9';
-// };
-//
-//
-//
-//
-//
-// // var readOut=document.getElementById('8').textContent;
-// // console.log(readOut);
-//
-// document.getElementById("8").onClick = numberPressed;
-//
-
-
 (function() {
   'use strict';
 
@@ -72,6 +46,61 @@
     document.getElementById('display').value = '1';
     console.log('yes');
   }
+  function plusPressed(){
+    operation = '+';
+    console.log('yes');
+  }
+  // function equalsPressed(){
+  //   operation = '=';
+  //   console.log('yes');
+  // }
+
+
+
+
+  var operation;
+
+  function numberPressed(number){
+    console.log('clown');
+    
+    // Get the displayed number
+    var displayedNumber = Number(document.getElementById('display').value);
+    console.log('no');
+
+    // Calculate the new number
+    if(operation == '+') {
+      displayedNumber = displayedNumber + number;
+    } else if(operation == '-') {
+
+    } else {
+      displayedNumber = number;
+    console.log('maybe');}
+
+
+    // Display the new number
+    document.getElementById('display').value = displayedNumber;
+    console.log('fox');
+  }
+
+//this is the pressed number
+  function ninePressed(event) {
+    event.preventDefault();
+    numberPressed(Number(9));
+    console.log('hound');
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 // telling the computer to read the HTML and listen for a click
 
   document.getElementById('9').addEventListener('click', ninePressed);
@@ -83,7 +112,7 @@
   document.getElementById('3').addEventListener('click', threePressed);
   document.getElementById('2').addEventListener('click', twoPressed);
   document.getElementById('1').addEventListener('click', onePressed);
-
+  document.getElementById('+').addEventListener('click', plusPressed);
 
 
 })();
