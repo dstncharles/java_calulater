@@ -3,56 +3,28 @@
 
   var operation;
 
-  function ninePressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '9';
-    console.log('yes');
-  }
-  function eightPressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '8';
-    console.log('yes');
-  }
-  function sevenPressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '7';
-    console.log('yes');
-  }
-  function sixPressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '6';
-    console.log('yes');
-  }
-  function fivePressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '5';
-    console.log('yes');
-  }
-  function fourPressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '4';
-    console.log('yes');
-  }
-  function threePressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '3';
-    console.log('yes');
-  }
-  function twoPressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '2';
-    console.log('yes');
-  }
-  function onePressed(event) {
-    event.preventDefault();
-    document.getElementById('display').value = '1';
-    console.log('yes');
-  }
+  
   function plusPressed(event){
     event.preventDefault();
     operation = '+';
     console.log('yes');
   }
+  function minusPressed(event){
+    event.preventDefault();
+    operation = '-';
+    console.log('pig');
+  }
+  function mutiplyPressed(event){
+    event.preventDefault();
+    operation = '*';
+    console.log('pig');
+  }
+  function dividePressed(event){
+    event.preventDefault();
+    operation = '/';
+    console.log('pig');
+  }
+
 
   function numberPressed(number){
     console.log('clown');
@@ -65,19 +37,22 @@
     if(operation == '+') {
       displayedNumber = displayedNumber + number;
     } else if(operation == '-') {
-
+      displayedNumber = displayedNumber - number;
+    } else if(operation == '*') {
+      displayedNumber = displayedNumber * number;
+    } else if(operation == '/') {
+      displayedNumber = displayedNumber / number;
     } else {
       displayedNumber = number;
       console.log('maybe');
     }
-
 
     // Display the new number
     document.getElementById('display').value = displayedNumber;
     console.log('fox');
   }
 
-//this is the pressed number
+// //this is the pressed number
   function ninePressed(event) {
     event.preventDefault();
     numberPressed(Number(9));
@@ -123,6 +98,11 @@
     numberPressed(Number(1));
     console.log('round');
   }
+  function zeroPressed(event) {
+    event.preventDefault();
+    numberPressed(Number(0));
+    console.log('round');
+  }
 
 
 
@@ -147,7 +127,9 @@
   document.getElementById('3').addEventListener('click', threePressed);
   document.getElementById('2').addEventListener('click', twoPressed);
   document.getElementById('1').addEventListener('click', onePressed);
+  document.getElementById('0').addEventListener('click', onePressed);
   document.getElementById('+').addEventListener('click', plusPressed);
-
-
+  document.getElementById('-').addEventListener('click', minusPressed);
+  document.getElementById('*').addEventListener('click', mutiplyPressed);
+  document.getElementById('divide').addEventListener('click', dividePressed);
 })();
