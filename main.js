@@ -53,10 +53,6 @@
     operation = '+';
     console.log('yes');
   }
-  // function equalsPressed(){
-  //   operation = '=';
-  //   console.log('yes');
-  // }
 
   function numberPressed(number){
     console.log('clown');
@@ -87,13 +83,46 @@
     numberPressed(Number(9));
     console.log('hound');
   }
-  // function eightPressed(event) {
-  //   event.preventDefault();
-  //   numberPressed(Number(8));
-  //   console.log('round');
-  // }
-
-
+  function eightPressed(event) {
+    event.preventDefault();
+    numberPressed(Number(8));
+    console.log('round');
+  }
+  function sevenPressed(event) {
+    event.preventDefault();
+    numberPressed(Number(7));
+    console.log('round');
+  }
+  function sixPressed(event) {
+    event.preventDefault();
+    numberPressed(Number(6));
+    console.log('round');
+  }
+  function fivePressed(event) {
+    event.preventDefault();
+    numberPressed(Number(5));
+    console.log('round');
+  }
+  function fourPressed(event) {
+    event.preventDefault();
+    numberPressed(Number(4));
+    console.log('round');
+  }
+  function threePressed(event) {
+    event.preventDefault();
+    numberPressed(Number(3));
+    console.log('round');
+  }
+  function twoPressed(event) {
+    event.preventDefault();
+    numberPressed(Number(2));
+    console.log('round');
+  }
+  function onePressed(event) {
+    event.preventDefault();
+    numberPressed(Number(1));
+    console.log('round');
+  }
 
 
 
