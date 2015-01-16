@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  var operation;
+
   function ninePressed(event) {
     event.preventDefault();
     document.getElementById('display').value = '9';
@@ -46,7 +48,8 @@
     document.getElementById('display').value = '1';
     console.log('yes');
   }
-  function plusPressed(){
+  function plusPressed(event){
+    event.preventDefault();
     operation = '+';
     console.log('yes');
   }
@@ -55,14 +58,9 @@
   //   console.log('yes');
   // }
 
-
-
-
-  var operation;
-
   function numberPressed(number){
     console.log('clown');
-    
+
     // Get the displayed number
     var displayedNumber = Number(document.getElementById('display').value);
     console.log('no');
@@ -74,7 +72,8 @@
 
     } else {
       displayedNumber = number;
-    console.log('maybe');}
+      console.log('maybe');
+    }
 
 
     // Display the new number
@@ -88,6 +87,12 @@
     numberPressed(Number(9));
     console.log('hound');
   }
+  // function eightPressed(event) {
+  //   event.preventDefault();
+  //   numberPressed(Number(8));
+  //   console.log('round');
+  // }
+
 
 
 
@@ -104,6 +109,7 @@
 // telling the computer to read the HTML and listen for a click
 
   document.getElementById('9').addEventListener('click', ninePressed);
+  console.log('baby');
   document.getElementById('8').addEventListener('click', eightPressed);
   document.getElementById('7').addEventListener('click', sevenPressed);
   document.getElementById('6').addEventListener('click', sixPressed);
