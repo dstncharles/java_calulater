@@ -70,7 +70,6 @@
     // Get the displayed number
     var displayedNumber = Number(document.getElementById('display').value);
 
-
     // Calculate the new number
     if(operation == '+') {
       displayedNumber = displayedNumber + number;
@@ -81,15 +80,14 @@
     } else if(operation == '/') {
       displayedNumber = displayedNumber / number;
     } else {
-      displayedNumber = number;
+      displayedNumber = displayedNumber + '' + number;
     }
 
     // Display the new number
-    document.getElementById('display').value = displayedNumber;
+    document.getElementById('display').value = displayedNumber * 1;
   }
 
-
-// telling the computer to read the HTML and listen for a click
+  // telling the computer to read the HTML and listen for a click
 
   document.getElementById('9').addEventListener('click', ninePressed);
   document.getElementById('8').addEventListener('click', eightPressed);
