@@ -62,6 +62,11 @@
     event.preventDefault();
     operation = '/';
   }
+  function clearPressed(event) {
+    event.preventDefault();
+    displayedNumber = number = 0;
+    document.getElementById('display').value = Number;
+  }
 
 
   function numberPressed(number){
@@ -98,7 +103,7 @@
   document.getElementById('3').addEventListener('click', threePressed);
   document.getElementById('2').addEventListener('click', twoPressed);
   document.getElementById('1').addEventListener('click', onePressed);
-  document.getElementById('0').addEventListener('click', onePressed);
+  document.getElementById('0').addEventListener('click', zeroPressed);
   document.getElementById('+').addEventListener('click', plusPressed);
   document.getElementById('-').addEventListener('click', minusPressed);
   document.getElementById('*').addEventListener('click', mutiplyPressed);
